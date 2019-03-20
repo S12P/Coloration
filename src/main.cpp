@@ -6,7 +6,7 @@
 
 using namespace std;
 
-string File = "test.txt";
+string File = "../test/test.txt";
 
 
 int search_max_degree(int nb_node, int tab[]){
