@@ -13,7 +13,7 @@ string File = "../test/test.txt";
 int search_max_degree(int nb_node, int tab[]){
         int max = 0;
         int indice_max = 0;
-        int somme;
+        int somme;/*unitile*/
         for (int i = 0; i < nb_node; i++) {
                 if (max < tab[i]) {
                         max = tab[i];
@@ -128,7 +128,7 @@ int main(){
                                 mat[i][n] = 0;
                         }
                 }
-                for (int i = 0; i < nb_node; i++) {
+                for (int i = 0; i < nb_node; i++) {/*boucle for (int i = 0; i < nb_node && !e; i++)*/ 
                         for (int j = 0; j < nb_node; j++) {
                                 if (mat[i][j] != 0) {
                                         e = false;
@@ -143,3 +143,4 @@ int main(){
         }
         cout << endl;
 }
+/*les noeuds où leurs degrés sont nuls*/
