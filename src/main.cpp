@@ -6,7 +6,6 @@
 
 using namespace std;
 
-string File = "../test/graphe.txt";
 
 
 int search_max_degree(int nb_node, int tab[]){
@@ -21,11 +20,19 @@ int search_max_degree(int nb_node, int tab[]){
         return(indice_max);
 }
 
-
-int main(){
-        system("python3 generateur_graphe.py");
+int main(int argc, char *argv[]){
+        string File;
+        if (argc == 1){
+          system("python3 generateur_graphe.py");
+          File = "../test/graphe.txt";
+        }
+        else{
+          File = argv[1];
+        }
         int nb_node = 0;
         int nb_vertex = 0;
+
+
         ifstream fichier(File, ios::in);
         fichier >> nb_node >> nb_vertex;
 
@@ -113,6 +120,9 @@ int main(){
           fichier_out << i + 1 << " " << color[i] << endl;
         }
         fichier_out.close();
-        system("python3 graphe.py");
+        cout << "file " << File << endl;
+        string out = "python3 graphe.py " + File;
+        cout << out << endl;
+        system(out.c_str());
         return 0;
 }
