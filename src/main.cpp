@@ -6,7 +6,7 @@
 
 using namespace std;
 
-string File = "../test/test.txt";
+string File = "../test/graphe.txt";
 
 
 int search_max_degree(int nb_node, int tab[]){
@@ -23,6 +23,7 @@ int search_max_degree(int nb_node, int tab[]){
 
 
 int main(){
+        system("python3 generateur_graphe.py");
         int nb_node = 0;
         int nb_vertex = 0;
         ifstream fichier(File, ios::in);
