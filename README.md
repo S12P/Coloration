@@ -41,3 +41,6 @@ File structure that describes the graph
 number_of_node  number_of_edges
 
 at each line two nodes that are connected by an edge
+
+
+you can find an example in the test folder
