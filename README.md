@@ -25,13 +25,13 @@ Building on Linux with random graph
     
     $ g++ main.cpp
     
-Building on OS X with random graph
+Building on OS X with a user-created file
 ----------------
     
     $ clang++ main.cpp name_of_file
     
     
-Building on Linux with random graph
+Building on Linux with a user-created file
 -----------------
     
     $ g++ main.cpp name_of_file
@@ -39,4 +39,5 @@ Building on Linux with random graph
 File structure that describes the graph
 -----------------
 number_of_node  number_of_edges
+
 at each line two nodes that are connected by an edge
